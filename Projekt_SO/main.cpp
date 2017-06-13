@@ -1,3 +1,4 @@
+#include "watki.h"
 #include "zasoby.h"
 
 int main()

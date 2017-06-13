@@ -1,5 +1,5 @@
-main.o: ../main.cpp ../zasoby.h ../watki.h
-
-../zasoby.h:
+main.o: ../main.cpp ../watki.h ../zasoby.h
 
 ../watki.h:
+
+../zasoby.h:
