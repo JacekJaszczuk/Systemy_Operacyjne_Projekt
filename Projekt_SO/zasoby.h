@@ -11,4 +11,13 @@ long long LACZNIE_W_KWADRACIE;
 long long LACZNIE_W_KOLE;
 double PI;
 
+// Stałe:
+const long long promien = 1000000LL;
+const long long promien2 = promien*promien;
+
+// Mutexy:
+std::mutex LICZBY_LOSOWE_mx;
+std::condition_variable GENERATOR_cv;
+std::condition_variable PRZETWARZACZ_cv;
+
 #endif /* ZASOBY_H_ */
