@@ -8,7 +8,7 @@ void GENERATOR()
 
 	while (true)
 	{
-		// Utwórz locka, dodawaj liczby do kolejki tylko wtedy kiedy jest ich mniej niż 200:
+		// Utwórz locka; dodawaj liczby do kolejki tylko wtedy kiedy jest ich mniej niż 200; wyślij notify, że jest liczba do odbioru:
 		std::unique_lock<std::mutex> lock(LICZBY_LOSOWE_mx);
 		GENERATOR_cv.wait(lock, []{ return LICZBY_LOSOWE.size() < 200; });
 		LICZBY_LOSOWE.push(distribution(urandom));

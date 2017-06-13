@@ -9,16 +9,17 @@
 #include <queue>
 #include <mutex>
 #include <condition_variable>
+#include <atomic>
 
-// Zasoby extern:
+// Zasoby:
 extern std::queue<long long> LICZBY_LOSOWE;
-extern long long SUMA_W_KWADRACIE1;
-extern long long SUMA_W_KOLE1;
-extern long long SUMA_W_KWADRACIE2;
-extern long long SUMA_W_KOLE2;
-extern long long LACZNIE_W_KWADRACIE;
-extern long long LACZNIE_W_KOLE;
-extern double PI;
+extern std::atomic<long long> SUMA_W_KWADRACIE1;
+extern std::atomic<long long> SUMA_W_KOLE1;
+extern std::atomic<long long> SUMA_W_KWADRACIE2;
+extern std::atomic<long long> SUMA_W_KOLE2;
+extern std::atomic<long long> LACZNIE_W_KWADRACIE;
+extern std::atomic<long long> LACZNIE_W_KOLE;
+extern std::atomic<double> PI;
 
 // Stałe extern:
 extern const long long promien;
@@ -28,6 +29,8 @@ extern const long long promien2;
 extern std::mutex LICZBY_LOSOWE_mx;
 extern std::condition_variable GENERATOR_cv;
 extern std::condition_variable PRZETWARZACZ_cv;
+extern std::condition_variable SUMATOR_cv;
+extern std::condition_variable APROKSYMACJA_cv;
 
 // Wątki:
 void GENERATOR();
