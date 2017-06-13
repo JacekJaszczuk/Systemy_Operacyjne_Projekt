@@ -11,7 +11,7 @@ void APROKSYMACJA()
 			APROKSYMACJA_cv.wait(lock);
 		}
 
-		// Policz i zapisz aktualną wartość PI:
-		PI = (double)LACZNIE_W_KOLE / (double)(LACZNIE_W_KOLE + LACZNIE_W_KWADRACIE);
+		// Policz i zapisz aktualną wartość PI (4 <= pole kwadratu):
+		PI = (double)LACZNIE_W_KOLE / (double)(LACZNIE_W_KOLE + LACZNIE_W_KWADRACIE) * 4.0;
 	}
 }
